@@ -28,28 +28,31 @@ export default Login
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        alignItems:'center',
+        //alignItems:'center',
         justifyContent:'center',
         backgroundColor:'white'
     },
     header:{
-        marginBottom: 70,
+        alignSelf: 'center',
+        marginBottom: 50,
         marginTop: 10
     },
     input:{
         borderWidth: 1,
         borderColor: '#c3c3c3',
         padding: 8,
-        marginTop: 15,
-        width: 370,
-        height: 48,
+        marginTop: 10,
+        marginHorizontal: 15,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
         borderRadius: 4
     },
     btn:{
-        width: 370,
-        height: 48,
+        marginHorizontal: 15,
+        paddingHorizontal: 40,
+        paddingVertical: 15,
         borderRadius: 4,
-        marginTop: 20,
+        marginTop: 15,
         backgroundColor: '#CC201D',
         alignItems: 'center',
         justifyContent: 'center'
@@ -60,8 +63,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     regist:{
+        alignSelf: 'center',
         fontSize: 14,
         color: '#000000',
-        marginTop: 27
+        marginTop: 15
     }
 })

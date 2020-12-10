@@ -111,8 +111,9 @@ const styles = StyleSheet.create({
         marginVertical: 25
     },
     btn:{
-        width: 174,
-        height: 50,
+        marginVertical: 10,
+        paddingHorizontal: 50,
+        paddingVertical: 15,
         borderRadius: 4,
         alignItems: 'center',
         justifyContent: 'center',
@@ -120,8 +121,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF'
     },
     btn2:{
-        width: 174,
-        height: 50,
+        marginVertical: 10,
+        paddingHorizontal: 50,
+        paddingVertical: 15,
         borderRadius: 4,
         alignItems: 'center',
         justifyContent: 'center',

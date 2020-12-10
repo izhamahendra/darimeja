@@ -25,13 +25,14 @@ export default MainPage
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        alignItems:'center',
+        //alignItems:'center',
         justifyContent:'center',
         backgroundColor:'white'
     },
     btn:{
-        width: 370,
-        height: 48,
+        marginHorizontal: 15,
+        paddingHorizontal: 40,
+        paddingVertical: 15,
         borderRadius: 4,
         marginTop: 80,
         backgroundColor: '#CC201D',
@@ -39,20 +40,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     header:{
+        alignSelf: 'center',
         marginTop: 10
     },
     header2:{
+        alignSelf: 'center',
         marginBottom: 20,
-        marginTop: 80
+        marginTop: 50
     },
     btn2:{
-        width: 370,
-        height: 48,
+        marginHorizontal: 15,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
         borderRadius: 4,
         marginTop: 20,
-        backgroundColor: '#CC201D',
+        //backgroundColor: '#CC201D',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderWidth: 5,
+        borderColor: '#CC201D',
     },
     lgn:{
         fontSize: 18,
@@ -61,10 +67,10 @@ const styles = StyleSheet.create({
     },
     lgn2:{
         fontSize: 18,
-        paddingHorizontal: 149,
-        paddingVertical: 10,
+        // paddingHorizontal: 130,
+        // paddingVertical: 10,
         fontWeight: 'bold',
         color: '#CC201D',
-        backgroundColor: '#FFFFFF'
+        //backgroundColor: '#FFFFFF'
     },
 })

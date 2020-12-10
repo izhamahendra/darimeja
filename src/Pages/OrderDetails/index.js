@@ -107,10 +107,9 @@ const styles = StyleSheet.create({
         marginTop: 3
     },
     btn:{
-        width: 330,
-        height: 48,
+        marginVertical: 10,
+        paddingVertical: 15,
         borderRadius: 4,
-        marginTop: 5,
         backgroundColor: '#31B057',
         alignItems: 'center',
         justifyContent: 'center'
