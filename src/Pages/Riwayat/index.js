@@ -1,8 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
 
-const Riwayat = () => {
+const Riwayat = ({navigation}) => {
     return (
         <ScrollView>
         <View>
@@ -18,6 +20,7 @@ const Riwayat = () => {
             <View style={styles.container2}>
                 <Text style={styles.b2}>Total Pendapatan : Rp 1.300.000</Text>
             </View>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Nadin Amizah - A09</Text>
@@ -27,6 +30,8 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (9), 7 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Nadiem Makarim - A08</Text>
@@ -36,6 +41,8 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (4), 2 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Jack Ma - A07</Text>
@@ -45,12 +52,14 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (13), 3 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
             <View style={styles.container1}>
                 <Text style={styles.b1}>Kemarin</Text>
             </View>
             <View style={styles.container2}>
                 <Text style={styles.b2}>Total Pendapatan : Rp 1.100.000</Text>
             </View>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Mamang Odading - A10</Text>
@@ -60,6 +69,8 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (12), 5 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Nadiem - A05</Text>
@@ -69,6 +80,8 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (1), 6 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {navigation.navigate('RiwayatDetails')}}>
             <View style={styles.card1}>
                 <View style={styles.pesanan}>
                 <Text style={styles.pemesan}>Jack - A01</Text>
@@ -78,6 +91,7 @@ const Riwayat = () => {
                     <Text style={styles.pick}>Pickup On Table (2), 11 Item</Text>
                 </View>
             </View>
+            </TouchableHighlight>
         </View>
         </ScrollView>
     )

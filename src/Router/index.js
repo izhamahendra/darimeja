@@ -8,6 +8,7 @@ import Register from '../Pages/Register';
 import Toko from '../Pages/Toko';
 import Order from '../Pages/Order';
 import Riwayat from '../Pages/Riwayat';
+import RiwayatDetails from '../Pages/RiwayatDetails';
 import BottomNavigator from '../Components/BottomNavigator';
 import OrderDetails from '../Pages/OrderDetails';
 import TambahMenu from '../Pages/TambahMenu';
@@ -33,6 +34,7 @@ const Router = () => {
             <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
             <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
             <Stack.Screen name="OrderDetails" component={OrderDetails}/>
+            <Stack.Screen name="RiwayatDetails" component={RiwayatDetails}/>
             <Stack.Screen name="Tambah Menu" component={TambahMenu}/>
         </Stack.Navigator>
     );
