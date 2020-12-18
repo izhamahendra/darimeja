@@ -9,16 +9,39 @@ import Toko from '../Pages/Toko';
 import Order from '../Pages/Order';
 import Riwayat from '../Pages/Riwayat';
 import RiwayatDetails from '../Pages/RiwayatDetails';
-import BottomNavigator from '../Components/BottomNavigator';
 import OrderDetails from '../Pages/OrderDetails';
 import TambahMenu from '../Pages/TambahMenu';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator 
+        screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+  
+              if (route.name === 'Toko') {
+                iconName = focused
+                  ? 'home'
+                  : 'home';
+              } else if (route.name === 'Riwayat') {
+                iconName = focused ? 'clipboard-list' : 'clipboard-list';
+              }
+              else if (route.name === 'Order') {
+                iconName = focused ? 'list-alt' : 'list-alt';
+              }
+              
+              return <Icon name={iconName} size={size} color={color} />;
+            },
+          })}
+          tabBarOptions={{
+            activeTintColor: '#CC201D',
+            inactiveTintColor: 'gray',
+          }}
+        >
             <Tab.Screen name="Order" component={Order} />
             <Tab.Screen name="Toko" component={Toko} />
             <Tab.Screen name="Riwayat" component={Riwayat} />

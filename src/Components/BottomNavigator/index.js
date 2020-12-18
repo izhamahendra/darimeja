@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
-import { IconHome, IconTrans, IconProfile } from '../../assets'
+import TabItem from '../TabItem';
 
 const BottomNavigator = ({ state, descriptors, navigation }) => {
     const focusedOptions = descriptors[state.routes[state.index].key].options;
@@ -41,29 +41,14 @@ const BottomNavigator = ({ state, descriptors, navigation }) => {
           });
         };
 
-        const Icon = () => {
-            if(label === " ") return isFocused ? <IconHome/> : <IconHome />
-            if(label === "  ") return isFocused ? <IconTrans/> : <IconTrans />
-            if(label === "   ") return isFocused ? <IconProfile/> : <IconProfile />
-            return <IconHome />
-        }
-
         return (
-          <TouchableOpacity
+          <TabItem 
             key={index}
-            accessibilityRole="button"
-            accessibilityState={isFocused ? { selected: true } : {}}
-            accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarTestID}
+            label={label}
+            isFocused={isFocused}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={styles.container}
-          >
-              <Icon />
-            <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
-              {label}
-            </Text>
-          </TouchableOpacity>
+          />
         );
       })}
     </View>
